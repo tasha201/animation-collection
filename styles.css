@@ -8,14 +8,24 @@
   background-color: #D3D3D3;
 }
 
+/* move animation */
+.move {
+  position: absolute;
+  top: 10%;
+  left: 45%;
+}
+
+.move-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
 .box {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  margin: 0 auto;
   background-color: white;
-  position: absolute;
-  top: 20%;
-  left: 50%;
   animation: move 1s ease-in-out infinite alternate forwards;
   /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
@@ -36,5 +46,76 @@
     height: 80px;
     border-radius: 0%;
     transform: rotate(360deg);
+  }
+}
+
+/* pulse animation */
+
+.pulse {
+  position: absolute;
+  top: 50%;
+  left: 34%;
+}
+
+.pulse-title {
+  text-align: center;
+}
+
+.circles {
+  width: 500px;
+  padding: 40px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.circle-white {
+  background-color: white;
+}
+
+.circle-red {
+  background-color: red;
+}
+
+.circle-orange {
+  background-color: orangered;
+}
+
+.circle-yellow {
+  background-color: orange;
+}
+
+.circle-blue {
+  background-color: lightskyblue;
+}
+
+.circle-green {
+  background-color: lightseagreen;
+}
+
+.circle-voilet {
+  background-color: purple;
+}
+
+.circle-black {
+  background-color: black;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0;
+  }
+  100% {
+    box-shadow: 0 0 15px 5px white;
   }
 }
