@@ -119,3 +119,44 @@
     box-shadow: 0 0 15px 5px white;
   }
 }
+
+/* rotating animation */
+
+.item {
+  width: 50px;
+  height: 50px;
+  background-color: salmon;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: rotating 8s ease-out infinite alternate forwards;
+}
+
+@keyframes rotating {
+  0% {
+    top: 2%;
+    left: 2%;
+  }
+  25% {
+    top: 20%;
+    left: calc(98% - 50px);
+    background-color: orangered;
+  }
+  50% {
+    top: calc(98% - 50px);
+    left: calc(98% - 500px);
+    border-radius: 50%;
+    transform: rotate(180deg) scale(1.5);
+  }
+  75% {
+    top: calc(98% - 400px);
+    left: 2%;
+    background-color: lightpink;
+  }
+  100% {
+    top: 0;
+    left: 20%;
+    transform: rotate(360deg);
+  }
+}
